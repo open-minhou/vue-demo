@@ -7,6 +7,7 @@ import router from './router'
 Vue.config.productionTip = false
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import config from './config'
 
 const requireComponent = require.context(
   // 其组件目录的相对路径
@@ -42,6 +43,6 @@ requireComponent.keys().forEach(fileName => {
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  // components: { App },
+  // template: '<App/>'
 })

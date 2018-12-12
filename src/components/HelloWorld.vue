@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" id='app'>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -81,11 +81,11 @@
       </li>
       
     </ul>
-    <div :style="{fontSize:postFontSize+'em'}"> <!-- 通过$event获取组件事件抛出的值-->
-        <BlogPost v-for="item in items" :post="item" :key="item.id" @enlarge-text="postFontSize+=$event"></BlogPost>
+    <!-- <div :style="{fontSize:postFontSize+'em'}"> 通过$event获取组件事件抛出的值 -->
+        <!-- <BlogPost v-for="item in items" :post="item" :key="item.id" @enlarge-text="postFontSize+=$event"></BlogPost>
         <CustomInput v-model="Title"></CustomInput>
-        <label>{{Title}}</label>
-    </div>
+        <label>{{Title}}</label> -->
+    <!-- </div> -->
   </div>
 </template>
 

@@ -3,7 +3,7 @@
  2、在其input事件被触发时，将新的值通过自定义的input事件抛出
 -->
 <template>
-<label>{{lable}}
+<label>{{label}}
     <input v-bind="$attrs" :value="value" @input="$emit('input',$event.target.value)"/>
 </label>
 </template>
@@ -12,7 +12,7 @@ export default {
     name:'CustomInput',
     props:['value','label'],
     inheritAttrs:false,
-    computed:function(){
+    created(){
         var vm=this;
         return Object.assign({},this.$listeners,{
             input:function(event){

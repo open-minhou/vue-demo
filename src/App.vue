@@ -4,10 +4,11 @@
     <!-- <router-view/> -->
     <div :style="{fontSize:postFontSize+'em'}"> <!-- 通过$event获取组件事件抛出的值-->
         <BlogPost v-for="item in items" :post="item" :key="item.id" @enlarge-text="postFontSize+=$event"></BlogPost>
-        <CustomInput v-model="Title" class="username-input" placeholder="Enter your username"></CustomInput>
+        <CustomInput label='test' v-model="Title" class="username-input" placeholder="Enter your username"></CustomInput>
         <label>{{Title}}</label>
         <AlertBox>Something bad.</AlertBox>
     </div>
+    <Tran></Tran>
   </div>
 </template>
 
@@ -16,6 +17,7 @@
 import BlogPost from '@/components/BlogPost'
 import CustomInput from '@/components/CustomInput' 
 import AlertBox from '@/components/AlertBox' 
+import Tran from '@/components/TransitionTest'
 export default {
   name: 'App',
   data(){
@@ -33,7 +35,8 @@ export default {
   components: {
     BlogPost,
     CustomInput,
-    AlertBox
+    AlertBox,
+    Tran
   }
 }
 </script>
