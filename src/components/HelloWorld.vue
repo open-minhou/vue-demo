@@ -79,17 +79,37 @@
           awesome-vue
         </a>
       </li>
+      
     </ul>
+    <div :style="{fontSize:postFontSize+'em'}"> <!-- 通过$event获取组件事件抛出的值-->
+        <BlogPost v-for="item in items" :post="item" :key="item.id" @enlarge-text="postFontSize+=$event"></BlogPost>
+        <CustomInput v-model="Title"></CustomInput>
+        <label>{{Title}}</label>
+    </div>
   </div>
 </template>
 
 <script>
+
+import BlogPost from '@/components/BlogPost'
+import CustomInput from '@/components/CustomInput'
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Test App',
+      items:[
+        { id: 1, title: 'My journey with Vue',content:'aaa' },
+        { id: 2, title: 'Blogging with Vue',content:'bbb' },
+        { id: 3, title: 'Why Vue is so fun',content:'ccc' }
+      ],
+      postFontSize:1,
+      Title:'name'
     }
+  },
+  components: {
+    BlogPost,
+    CustomInput
   }
 }
 </script>
