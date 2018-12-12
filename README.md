@@ -5,17 +5,29 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
-npm install
+#设置淘宝镜像
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+#安装vuecli
+cnpm i -g vue-cli
+#
+cnpm i -g vue-init
 
-# serve with hot reload at localhost:8080
-npm run dev
+#安装webpack
+cnpm i -g webpack
 
-# build for production with minification
-npm run build
+#安装Webpackcli
+cnpm i -g webpack-cli
 
-# build for production and view the bundle analyzer report
-npm run build --report
+#初始化webpack模板的vue脚手架工程
+#不要选择自动执行npm install 避免网络原因，无法成功完成操作
+#不要选择Eslintjs 代码严格校验，缩进多了都会导致编译不通过
+vue init webpack [pgoject name]
+
+#通过cnpm 安装依赖
+cnpm install
+
+#运行Web服务 
+npm start
 
 # run unit tests
 npm run unit
