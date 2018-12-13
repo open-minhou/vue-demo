@@ -9,6 +9,7 @@
         <AlertBox>Something bad.</AlertBox>
     </div>
     <Tran></Tran>
+    <tree-grid/>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import BlogPost from '@/components/BlogPost'
 import CustomInput from '@/components/CustomInput' 
 import AlertBox from '@/components/AlertBox' 
 import Tran from '@/components/TransitionTest'
+import TreeGrid from '@/components/treegridcomponents/TreeGrid'
 export default {
   name: 'App',
   data(){
@@ -36,7 +38,8 @@ export default {
     BlogPost,
     CustomInput,
     AlertBox,
-    Tran
+    Tran,
+    TreeGrid
   }
 }
 </script>

@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import App from '@/App'
 import Tran from '@/components/TransitionTest'
 import TodoList from '@/components/TodoList'
+import TreeGrid from '@/components/treegridcomponents/TreeGrid'
 Vue.use(Router)
 
 export default new Router({
@@ -24,9 +25,9 @@ export default new Router({
       component: App
     },
     {
-      path: '/todo',
-      name: 'Todo',
-      component: TodoList
+      path: '/tree',
+      name: 'tree',
+      component: TreeGrid
     }
   ]
 })
