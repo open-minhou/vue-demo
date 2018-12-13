@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import App from '@/App'
 import Tran from '@/components/TransitionTest'
+import TodoList from '@/components/TodoList'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,11 @@ export default new Router({
       path: '/app',
       name: 'App',
       component: App
+    },
+    {
+      path: '/todo',
+      name: 'Todo',
+      component: TodoList
     }
   ]
 })

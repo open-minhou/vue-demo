@@ -7,7 +7,6 @@
             <p v-if="show">Hello</p>
         </transition>
         <div id="example-2">
-  <button @click="show = !show">Toggle show</button>
   <transition name="bounce">
     <p v-if="show">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis enim libero, at lacinia diam fermentum id. Pellentesque habitant morbi tristique senectus et netus.</p>
   </transition>
@@ -16,12 +15,33 @@
 </template>
 
 <script>
+/**混入对象
+ * 
+ */
+var myMixin={
+  data(){
+    return {
+      message:'hello',
+      foo:'abc'
+    }
+  },
+  created(){
+    console.log('混入对象钩子')
+  }
+};
 export default {
     name:'TransitionTest',
     data(){
         return {
-            show:true
+            show:true,
+            message:'goodbye',
+            bar:'def'
         }
+    },
+    mixins:[myMixin],
+    created(){
+      console.log(this.$data)
+      console.log('组件钩子')
     }
 }
 </script>
