@@ -13,3 +13,18 @@ export default {
     props:['value','editAble','isFirst','hasChild','level']
 }
 </script>
+<style>
+div{
+    width: 300px;
+}
+td {
+  text-align: left;
+  width: 100%;
+  border: solid 1px black;
+  padding: 0px;
+  margin: 0px
+}
+tr{
+    width: 100%;
+}
+</style>
